@@ -1,0 +1,179 @@
+/* Layout */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  margin: 30px 0 10px;
+  line-height: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+
+.article-container, .about {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Base Styles */
+body {
+  background-color: #09090b;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.2rem;
+}
+
+.ascii-rainbow {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 20px;
+  line-height: 1;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: moveRainbow 5s linear infinite;
+}
+
+@keyframes moveRainbow {
+  to { background-position: -200% center; }
+}
+
+@media (max-width: 600px) {
+  .ascii-rainbow { font-size: 8px; }
+}
+
+.logo {
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  display: inline-block;
+}
+
+.img-button {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.img-button:hover, .text-button:hover {
+  transform: scale(1.1);
+}
+
+.text-button {
+  display: block;
+  margin-top: 5px;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.text-button:hover {
+  color: #ccc;
+}
+
+/* Footer */
+.footer {
+  background-color: #09090b;
+  color: #666;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* Article and About Page Styles */
+.article-container h3, .about h3 {
+  color: #00bfff;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.article-container p, .about p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.about p {
+  font-size: 1.1rem;
+}
+
+.cut-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-height 0.5s ease;
+}
+
+.full-text {
+  display: block;
+}
+
+/* Buttons */
+.btn-ler-mais {
+  background: none;
+  border: none;
+  color: #00bfff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #00bfff;
+}
+
+.btn-ler-mais:hover {
+  color: white;
+  border-color: white;
+}
+
+/* Typewriter Effect */
+#typewriter {
+  color: #00bfff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  min-height: 60px;
+  white-space: pre-line;
+}
+
+#typewriter::after {
+  content: '|';
+  margin-left: 5px;
+  animation: blinkCursor 0.8s infinite;
+  color: white;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
