@@ -44,10 +44,10 @@ function initParticles() {
                 }
             },
             "color": {
-                "value": "#4B0082"
+                "value": "#ffffff"
             },
             "shape": {
-                "type": "circle"
+                "type": "triangle",
             },
             "opacity": {
                 "value": 0.5,
@@ -60,13 +60,13 @@ function initParticles() {
             "line_linked": {
                 "enable": true,
                 "distance": 150,
-                "color": "#ccc",
+                "color": "#ffffff",
                 "opacity": 0.4,
                 "width": 1
             },
             "move": {
                 "enable": true,
-                "speed": 2,
+                "speed": 1,
                 "direction": "none",
                 "random": false,
                 "straight": false,
@@ -97,4 +97,3 @@ window.onload = () => {
     typeText('typewriter');
     initParticles();
 };
-

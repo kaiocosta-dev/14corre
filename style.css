@@ -1,26 +1,39 @@
 /* Layout */
 header {
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-header h1 {
-  margin: 30px 0 10px;
-  line-height: 0;
+  padding: 50px 20px 20px;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 1;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
-  margin-top: 20px;
+  padding: auto;
+  margin: 0;
+  margin-top: auto;
+  display: flex;
+  justify-content: center
 }
 
 nav li {
   display: inline-block;
   margin: 0 20px;
   vertical-align: middle;
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+nav a, .btn-ler-mais, #logo-ascii {
+  pointer-events: auto;
 }
 
 .article-container, .about {
@@ -43,7 +56,7 @@ body {
 .ascii-rainbow {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 8px;
   text-align: center;
   display: inline-block;
   margin-bottom: 20px;
@@ -55,32 +68,13 @@ body {
   color: transparent;
   -webkit-text-fill-color: transparent;
   animation: moveRainbow 5s linear infinite;
+  z-index: 11;
+  position: relative;
+  padding: auto 0;
 }
 
 @keyframes moveRainbow {
   to { background-position: -200% center; }
-}
-
-@media (max-width: 600px) {
-  .ascii-rainbow { font-size: 8px; }
-}
-
-.logo {
-  width: 300px;
-  max-width: 90%;
-  height: auto;
-  display: inline-block;
-}
-
-.img-button {
-  width: 150px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.img-button:hover, .text-button:hover {
-  transform: scale(1.1);
 }
 
 .text-button {
@@ -99,11 +93,13 @@ body {
 .footer {
   background-color: transparent;
   color: #666;
-  padding: 20px 0;
-  margin-top: 40px;
-  font-size: 0.9rem;
+  padding: auto;
+  margin-top: auto;
+  font-size: 0.7rem;
   position: fixed;
   bottom: 0;
+  width: max-content;
+  text-align: center;
 }
 
 /* Article and About Page Styles */
@@ -125,6 +121,10 @@ body {
 
 .about p {
   font-size: 1.1rem;
+}
+
+.about h3 {
+  color: #ffffff;
 }
 
 .cut-text {
@@ -175,11 +175,6 @@ body {
   color: white;
 }
 
-@keyframes blinkCursor {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-/* Container das partículas */
 #particles-js {
   position: fixed;
   width: 100%;
@@ -190,21 +185,9 @@ body {
   background-color: #09090b;
 }
 
-header, main, footer {
-  position: relative;
-  z-index: 1;
-  pointer-events: none;
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-nav a, .btn-ler-mais, #logo-ascii {
-  pointer-events: auto;
-}
 
-.logo-container {
-  position: relative;
-  z-index: 11;
-  pointer-events: auto;
-  padding: auto;
-  background-color: #09090b;
-  display: inline-block;
-}
