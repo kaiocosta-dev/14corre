@@ -190,4 +190,9 @@ body {
   50% { opacity: 0; }
 }
 
+@media (max-width: 600px) {
+  .ascii-rainbow { font-size: 7px; }
+}
+
+
 
