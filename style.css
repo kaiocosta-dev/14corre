@@ -49,8 +49,8 @@ nav a, .btn-ler-mais, #logo-ascii {
 
 /* Base Styles */
 body {
-  background-color: #09090b;
-  color: white;
+  background-color: #282C34;
+  color: #DCDFE4;
   text-align: center;
   margin: 0;
   font-family: "Share Tech Mono", monospace;
@@ -65,13 +65,13 @@ body {
   display: inline-block;
   margin-bottom: 20px;
   line-height: 1;
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+  background: linear-gradient(to right, #E06C75, #98C379, #E5C07B, #61AFEF, #C678DD, #56B6C2, #DCDFE4);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: moveRainbow 5s linear infinite;
+  animation: moveRainbow 10s linear infinite;
   z-index: 11;
   position: relative;
   padding: auto 0;
@@ -85,7 +85,7 @@ body {
   display: block;
   margin-top: 5px;
   font-size: 1rem;
-  color: white;
+  color: #DCDFE4;
   text-decoration: none;
 }
 
@@ -108,7 +108,7 @@ body {
 
 /* Article and About Page Styles */
 .article-container h3, .about h3 {
-  color: #00bfff;
+  color: #61AFEF;
   border-bottom: 1px solid #333;
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -120,7 +120,7 @@ body {
 .article-container p, .about p {
   line-height: 1.6;
   margin-bottom: 15px;
-  color: #ccc;
+  color: #DCDFE4;
 }
 
 .about p {
@@ -128,7 +128,7 @@ body {
 }
 
 .about h3 {
-  color: #ffffff;
+  color: #DCDFE4;
 }
 
 .cut-text {
@@ -149,23 +149,23 @@ body {
 .btn-ler-mais {
   background: none;
   border: none;
-  color: #00bfff;
+  color: #61AFEF;
   cursor: pointer;
   font-family: inherit;
   font-size: 1rem;
   margin-top: 10px;
   text-transform: uppercase;
-  border-bottom: 1px dashed #00bfff;
+  border-bottom: 1px dashed #61AFEF;
 }
 
 .btn-ler-mais:hover {
-  color: white;
-  border-color: white;
+  color: #DCDFE4;
+  border-color: #DCDFE4;
 }
 
 /* Typewriter Effect */
 #typewriter {
-  color: #00bfff;
+  color: #61AFEF;
   font-size: 1.1rem;
   line-height: 1.6;
   min-height: 60px;
@@ -176,7 +176,7 @@ body {
   content: '|';
   margin-left: 5px;
   animation: blinkCursor 0.8s infinite;
-  color: white;
+  color: #DCDFE4;
 }
 
 #particles-js {
@@ -186,7 +186,6 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: #09090b;
 }
 
 @keyframes blinkCursor {
