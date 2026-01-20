@@ -97,3 +97,4 @@ window.onload = () => {
     typeText('typewriter');
     initParticles();
 };
+

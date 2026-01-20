@@ -1,4 +1,3 @@
-/* Layout */
 header {
   background-color: transparent;
   display: flex;
@@ -47,7 +46,6 @@ nav a, .btn-ler-mais, #logo-ascii {
   box-sizing: border-box;
 }
 
-/* Base Styles */
 body {
   background-color: #282C34;
   color: #DCDFE4;
@@ -60,7 +58,7 @@ body {
 .ascii-rainbow {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 8px;
+  font-size: 9px;
   text-align: center;
   display: inline-block;
   margin-bottom: 20px;
@@ -93,7 +91,6 @@ body {
   color: #ccc;
 }
 
-/* Footer */
 .footer {
   background-color: transparent;
   color: #666;
@@ -106,7 +103,6 @@ body {
   text-align: center;
 }
 
-/* Article and About Page Styles */
 .article-container h3, .about h3 {
   color: #61AFEF;
   border-bottom: 1px solid #333;
@@ -132,13 +128,33 @@ body {
 }
 
 .cut-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
+  position: relative;  
+  line-height: 1.5;
+  max-height: 10em;
   overflow: hidden;
-  text-overflow: ellipsis;
   transition: max-height 0.5s ease;
+  text-align: justify;
+}
+
+.cut-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #282C34);
+  
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.cut-text.expanded {
+  max-height: 1000px;
+}
+
+.cut-text.expanded::after {
+  opacity: 0;
 }
 
 .full-text {
@@ -163,7 +179,6 @@ body {
   border-color: #DCDFE4;
 }
 
-/* Typewriter Effect */
 #typewriter {
   color: #61AFEF;
   font-size: 1.1rem;
